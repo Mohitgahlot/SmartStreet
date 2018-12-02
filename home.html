@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>
+            Stimulation Station 
+        </title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav-container">
+                <nav class="navbar navbar-expand-lg my-nav">
+                  <a class="navbar-brand" href="#">Smart Street</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <i class="fa fa-bell icons" aria-hidden="true"></i>
+                        <i class="fa fa-user icons" aria-hidden="true"></i>
+                    </form>
+                  </div>
+                </nav>
+            </div>
+            <div class="hero clearfix">
+                <div class="left-container">
+                    <div class="left-head">
+                        Search nodes according to location
+                    </div>
+                    <div class="input">
+                        <input type="text" onchange="change()" class="input-box" id="input-box" list="area" placeholder="Santa Clara">
+                        <datalist id="area">
+                            <option value="Santa Clara"></option>
+                            <option value="San Fernando"></option>
+                            <option value="San Pedro"></option>
+                            <option value="Elcamino"></option>
+                            <option value="Saratoga"></option>
+                        </datalist>
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                <div class="right-container"  id="map">
+                    
+                </div>
+            </div>
+            <div class="chart-section">
+                <div class="left-head">
+                    
+                </div>
+                <div id="chart"></div>
+            </div>
+            
+            <div class="bargraph-section">
+            
+            </div>
+            
+            <div class="piechart-section clearfix">
+                <div class="pie-left">
+                    <div id="piechart1"></div>
+                </div>
+                <div class="pie-right">
+                    <div id="piechart2"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMPjjW-5G0nqm3cL1g4rTIubccAxXKl54&callback=initMap"
+    async defer></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        
+    </body>
+</html>
